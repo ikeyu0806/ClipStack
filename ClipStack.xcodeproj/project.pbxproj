@@ -14,6 +14,9 @@
 		100D12962EBF036500063425 /* ClipStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100D12952EBF036500063425 /* ClipStackTests.swift */; };
 		100D12A02EBF036500063425 /* ClipStackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100D129F2EBF036500063425 /* ClipStackUITests.swift */; };
 		100D12A22EBF036500063425 /* ClipStackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100D12A12EBF036500063425 /* ClipStackUITestsLaunchTests.swift */; };
+		100D12B22EBF050800063425 /* ClipItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100D12B12EBF050800063425 /* ClipItem.swift */; };
+		100D12B42EBF055D00063425 /* ClipStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100D12B32EBF055D00063425 /* ClipStackView.swift */; };
+		100D12B62EBF061700063425 /* ClipStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100D12B52EBF061700063425 /* ClipStackViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		100D129B2EBF036500063425 /* ClipStackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipStackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		100D129F2EBF036500063425 /* ClipStackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipStackUITests.swift; sourceTree = "<group>"; };
 		100D12A12EBF036500063425 /* ClipStackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipStackUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		100D12B12EBF050800063425 /* ClipItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipItem.swift; sourceTree = "<group>"; };
+		100D12B32EBF055D00063425 /* ClipStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipStackView.swift; sourceTree = "<group>"; };
+		100D12B52EBF061700063425 /* ClipStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipStackViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 		100D12822EBF036300063425 /* ClipStack */ = {
 			isa = PBXGroup;
 			children = (
+				100D12B02EBF04AC00063425 /* ViewModels */,
+				100D12AF2EBF049300063425 /* Views */,
+				100D12AE2EBF048C00063425 /* Model */,
 				100D12832EBF036300063425 /* ClipStackApp.swift */,
 				100D12852EBF036300063425 /* ContentView.swift */,
 				100D12872EBF036500063425 /* Assets.xcassets */,
@@ -127,6 +136,30 @@
 				100D12A12EBF036500063425 /* ClipStackUITestsLaunchTests.swift */,
 			);
 			path = ClipStackUITests;
+			sourceTree = "<group>";
+		};
+		100D12AE2EBF048C00063425 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				100D12B12EBF050800063425 /* ClipItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		100D12AF2EBF049300063425 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				100D12B32EBF055D00063425 /* ClipStackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		100D12B02EBF04AC00063425 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				100D12B52EBF061700063425 /* ClipStackViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				100D12B22EBF050800063425 /* ClipItem.swift in Sources */,
 				100D12862EBF036300063425 /* ContentView.swift in Sources */,
 				100D12842EBF036300063425 /* ClipStackApp.swift in Sources */,
+				100D12B62EBF061700063425 /* ClipStackViewModel.swift in Sources */,
+				100D12B42EBF055D00063425 /* ClipStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
