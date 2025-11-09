@@ -17,17 +17,27 @@ struct ClipStackView: View {
             .padding()
             
             List(viewModel.history) { item in
-                VStack(alignment: .leading) {
-                    Text(item.content)
-                        .lineLimit(2)
-                        .truncationMode(.tail)
-                        .font(.body)
-                    Text(item.date, style: .time)
-                        .font(.caption)
-                        .foregroundColor(.gray)
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(item.content)
+                            .lineLimit(2)
+                            .truncationMode(.tail)
+                            .font(.body)
+                        Text(item.date, style: .time)
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
+                    Button(action: {
+                        viewModel.togglePin(for: item)
+                    }) {
+                        Image(systemName: item.isPinned ? "pin.fill" : "pin")
+                            .foregroundColor(item.isPinned ? .yellow : .gray)
+                    }
+                    .buttonStyle(.plain)
                 }
                 .padding(.vertical, 4)
-                .contentShape(Rectangle()) // クリック判定を広げる
+                .contentShape(Rectangle()) // クリック領域拡大
                 .onTapGesture {
                     viewModel.copyToClipboard(item)
                 }
